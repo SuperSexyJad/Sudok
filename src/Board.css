@@ -1,0 +1,24 @@
+.cell {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin: -2px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square {
+  border-collapse: collapse;
+  border: 2px solid;
+  margin: -1px;
+}
+
+.board {
+  border-collapse: collapse;
+  border: 2px solid;
+}
