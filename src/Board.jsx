@@ -62,21 +62,17 @@ function Square({cells, squareRow, squareColumn, handleClick}) {
 function Board({currentNumber}) {
 
     const [cells, setCells] = useState(Array.from({ length: 9 }, () => new Array(9).fill(null)));
-    console.log({cells})
-    console.log(cells[0][0])
-    console.log(currentNumber)
 
     function handleClick(cellRow, cellColumn) {
-        console.log('clicked')
-        console.log(cellRow)
-        console.log(cellColumn)
+        const nextCells = cells.slice();
         if (cells[cellRow][cellColumn]) {
+            if (cells[cellRow][cellColumn] == currentNumber){
+                nextCells[cellRow][cellColumn] = null;
+                setCells(nextCells);
+            }
         return;
         }
-        const nextCells = cells.slice();
-        console.log(nextCells[cellRow][cellColumn])
         nextCells[cellRow][cellColumn] = currentNumber;
-        console.log(nextCells[cellRow][cellColumn])
         setCells(nextCells);
     }
 
