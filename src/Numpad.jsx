@@ -30,7 +30,35 @@ function NumButton({value, setCurrentNumber, isActive, setActiveNum}) {
     }
 }
 
-function NumPad({setCurrentNumber}) {
+function NoteButton({isNote, setIsNote}) {
+    
+    function handleClick() {
+        setIsNote(!isNote);
+    }
+
+    if (isNote){
+        return (
+            <button
+            className="numButton"
+            onClick={handleClick}
+            style={{background: "gray"}}
+            >
+            N
+            </button>  
+        );
+    } else {
+        return (
+            <button
+            className="numButton"
+            onClick={handleClick}
+            >
+            N
+            </button>  
+        );
+    }
+}
+
+function NumPad({isNote, setIsNote, setCurrentNumber}) {
     const [activeNum, setActiveNum] = useState(null);
     return (
         <>
@@ -43,6 +71,7 @@ function NumPad({setCurrentNumber}) {
             <NumButton value={7} setCurrentNumber={setCurrentNumber} isActive={activeNum === 7} setActiveNum={setActiveNum}/>
             <NumButton value={8} setCurrentNumber={setCurrentNumber} isActive={activeNum === 8} setActiveNum={setActiveNum}/>
             <NumButton value={9} setCurrentNumber={setCurrentNumber} isActive={activeNum === 9} setActiveNum={setActiveNum}/>
+            <NoteButton isNote={isNote} setIsNote={setIsNote}/>
         </>
     );
 }
