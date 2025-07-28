@@ -1,0 +1,40 @@
+.cell {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  /* line-height: 34px; */
+  height: 34px;
+  margin: -2px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square {
+  border-collapse: collapse;
+  border: 2px solid;
+  margin: -1px;
+}
+
+.board {
+  border-collapse: collapse;
+  border: 2px solid;
+}
+
+.notes{
+    table-layout : fixed;
+    color: #999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 7px;
+    padding: -2px;
+}
+
+.notes tr td{
+    width: 33%;
+    height: 33%;
+}
